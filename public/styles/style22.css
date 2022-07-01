@@ -1,0 +1,29 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table{
+    width: 400px;
+    height: 400px;
+    border-collapse: collapse;
+}
+
+tr.linha1{
+    background-color: lightgrey;
+}
+
+tr:hover{
+    background-color: aquamarine;
+}
+
+td:hover{
+    background-color: rgb(48, 163, 125);
+}
+
+td{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;   /* Alinhamento horizontal */
+    vertical-align: middle;
+   
+}
