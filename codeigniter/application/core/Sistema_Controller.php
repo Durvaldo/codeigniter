@@ -152,8 +152,6 @@ class Sistema_Controller extends CI_Controller
 
     public function view(string $view, array $data = []): void
         {
-            $data['durvaldo'] = 'passei aqui';
-            pre($data);
 
             $data['csrf_input'] = '<input type="hidden" name="' . $this->security->get_csrf_token_name() . '" value="' . $this->security->get_csrf_hash() . '">';
             $data['csrf_name'] = $this->security->get_csrf_token_name();

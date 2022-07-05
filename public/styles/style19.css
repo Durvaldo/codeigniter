@@ -5,7 +5,17 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
- }
+}
+
+h3{
+    color: black!important;
+}
+
+p{
+    line-height: 1em;
+    font-size: 0.99em;
+    text-align: justify;
+}
 
 #main{
     background-color: bisque;
@@ -14,5 +24,5 @@ body{
     border: 1px solid darkblue;
     border-radius: 15px;
     padding: 10px;
-
+    color: black!important;
 }

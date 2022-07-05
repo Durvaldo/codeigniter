@@ -2,11 +2,11 @@
         <h1>Inserindo videos hospedados localmente</h1>
         <p>Esse video está no meu computador</p>
         <!-- Maneira que gasta muita banda e pouco utilizado -->
-        <video width="500" poster="../imagens/limoes-capa.png" controls >
-            <source src="../midias/meu-video.mp4" type="video/mp4">
-            <source src="../midias/meu-video.m4v" type="video/mp4">
-            <source src="../midias/meu-video.webm" type="video/webm">
-            <source src="../midias/meu-video.ogv" type="video/ogg">
+        <video width="500" poster="<?= base_url('public/imagens/limoes-capa.png')?>" controls>        
+            <source src="<?= base_url('public/midias/meu-video.mp4')?>" type="video/mp4">
+            <source src="<?= base_url('public/midias/meu-video.m4v')?>" type="video/mp4">
+            <source src="<?= base_url('public/midias/meu-video.webm')?>" type="video/webm">
+            <source src="<?= base_url('public/midias/meu-video.ogv')?>" type="video/ogg">
             <p>Seu navegador não tem compatibilidade com reprodução de videos</p>
         </video>
         <h1>Inserindo videos do youtube</h1>

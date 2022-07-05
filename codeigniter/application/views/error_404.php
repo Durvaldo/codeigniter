@@ -1,100 +1,97 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr">
-
+<html lang="pt-br">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - ERRO</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-    <!-- ===============================================-->
-    <!--    Document Title-->
-    <!-- ===============================================-->
-    <title>INFOSUS - Página não existe</title>
-
-    <!-- ===============================================-->
-    <!--    Favicons-->
-    <!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url() ?>/public/v2/assets/img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url() ?>/public/v2/assets/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>/public/v2/assets/img/favicons/favicon-16x16.png">
-    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>/public/v2/assets/img/favicons/favicon.ico">
-    <link rel="manifest" href="<?= base_url() ?>/public/v2/assets/img/favicons/manifest.json">
-    <meta name="msapplication-TileImage" content="<?= base_url() ?>/public/v2/assets/img/favicons/mstile-150x150.png">
-    <meta name="theme-color" content="#ffffff">
-    <script src="<?= base_url() ?>/public/v2/assets/js/config.navbar-vertical.js"></script>
-
-    <!-- ===============================================-->
-    <!--    Stylesheets-->
-    <!-- ===============================================-->
-    <link href="<?= base_url() ?>/public/v2/assets/css/theme-rtl.min.css" rel="stylesheet" id="style-rtl" />
-    <link href="<?= base_url() ?>/public/v2/assets/css/theme.min.css" rel="stylesheet" id="style-default" />
-    <script>
-        var isRTL = JSON.parse(localStorage.getItem('isRTL'));
-        if (isRTL) {
-            var linkDefault = document.getElementById('style-default');
-            linkDefault.setAttribute('disabled', true);
-            document.querySelector('html').setAttribute('dir', 'rtl');
-        } else {
-            var linkRTL = document.getElementById('style-rtl');
-            linkRTL.setAttribute('disabled', true);
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Press Start 2P';
+            color: #FFFFFF;
+            text-align: center;
         }
-    </script>
+
+        body {
+            background-color: #000000;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='58' viewBox='0 0 42 58'%3E%3Cg fill='%23dddcdd' fill-opacity='0.23'%3E%3Cpath fill-rule='evenodd' d='M12 18h12v18h6v4H18V22h-6v-4zm-6-2v-4H0V0h36v6h6v36h-6v4h6v12H6v-6H0V16h6zM34 2H2v8h24v24h8V2zM6 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM2 50h32v-8H10V18H2v32zm28-6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        section.notFound {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 5%;
+            height: 100vh;
+        }
+
+        section.notFound h1 {
+            color: red;
+            font-size: 100px;
+        }
+
+        section.notFound h2 {
+            font-size: 50px;
+        }
+
+        section.notFound h1, h2, h3 {
+            margin-bottom: 40px;
+        }
+
+        div.text {
+            height: 50vh;
+        }
+
+        div.text a {
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        div.text a:hover {
+            color: red;
+            text-decoration: underline; 
+        }
+
+        @media only screen and (max-width: 768px) {
+            section.notFound {
+                flex-direction: column;
+                justify-content: space-around;
+            }
+            section.notFound div.img img {
+                width: 70vw;
+                height: auto;
+            }
+            section.notFound h1 {
+                font-size: 50px;
+            }
+            section.notFound h2 {
+                font-size: 25px;
+            }
+            div.text a:active {
+            color: red;
+            text-decoration: underline; 
+        }
+        }
+    </style>
 </head>
-
 <body>
-    <!-- ===============================================-->
-    <!--    Main Content-->
-    <!-- ===============================================-->
-    <main class="main" id="top">
-        <div class="container" data-layout="container">
-            <script>
-                var isFluid = JSON.parse(localStorage.getItem('isFluid'));
-                if (isFluid) {
-                    var container = document.querySelector('[data-layout]');
-                    container.classList.remove('container');
-                    container.classList.add('container-fluid');
-                }
-            </script>
-            <div class="row flex-center min-vh-100 py-6 text-center">
-                <div class="col-sm-10 col-md-8 col-lg-6 col-xxl-5">
-                    <a class="d-flex flex-center mb-4" href="<?= base_url() ?>/public/v2/index.html">
-                        <img class="align-content" src="<?= base_url() ?>/public/images/logo.png" width="100" alt="Logotipo Infosus">
-                    </a>
-                    <div class="card">
-                        <div class="card-body p-4 p-sm-5">
-                            <div class="font-weight-black lh-1 text-300 fs-error">404</div>
-                            <p class="lead mt-4 text-800 font-sans-serif font-weight-semi-bold w-75 w-xl-100 mx-auto">Essa página não existe ou foi movida.</p>
-                            <hr />
-                            <p>
-                                Se este erro persistir entre em contato com o nosso canal de suporte: <a href="#">Suporte pelo whatsapp</a>.
-                            </p>
-                            <a class="btn btn-primary btn-sm mt-3" href="<?=base_url()?>">
-                                <span class="fas fa-home mr-2"></span>Voltar a página inicial
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="notFound">
+        <div class="img">
+        <img src="https://assets.codepen.io/5647096/backToTheHomepage.png" alt="Back to the Homepage"/>
+        <img src="https://assets.codepen.io/5647096/Delorean.png" alt="El Delorean, El Doc y Marti McFly"/>
         </div>
-    </main><!-- ===============================================-->
-    <!--    End of Main Content-->
-    <!-- ===============================================-->
-
-
-
-    <!-- ===============================================-->
-    <!--    JavaScripts-->
-    <!-- ===============================================-->
-    <script src="<?= base_url() ?>/public/v2/vendors/popper/popper.min.js"></script>
-    <script src="<?= base_url() ?>/public/v2/vendors/bootstrap/bootstrap.min.js"></script>
-    <script src="<?= base_url() ?>/public/v2/vendors/anchorjs/anchor.min.js"></script>
-    <script src="<?= base_url() ?>/public/v2/vendors/is/is.min.js"></script>
-    <script src="<?= base_url() ?>/public/v2/vendors/fontawesome/all.min.js"></script>
-    <script src="<?= base_url() ?>/public/v2/vendors/lodash/lodash.min.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-    <script src="<?= base_url() ?>/public/v2/vendors/list.js/list.min.js"></script>
-    <script src="<?= base_url() ?>/public/v2/assets/js/theme.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:100,200,300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
+        <div class="text">
+        <h1>404</h1>
+        <h2>PAGE NOT FOUND</h2>
+        <h3>BACK TO HOME?</h3>
+        <a href="<?= base_url()?>" class="yes">YES</a>
+        <a target="_blank" href="https://www.youtube.com/watch?v=G3AfIvJBcGo">NO</a>
+        </div>
+    </section>
 </body>
-
 </html>

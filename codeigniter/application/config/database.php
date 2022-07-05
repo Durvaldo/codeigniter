@@ -8,8 +8,8 @@ $active_group = 'codeigniter';
 
 $db['codeigniter'] = array(
 	'dsn'	   => '',
-	'hostname' => localhost,
-	'username' => root,
+	'hostname' => 'localhost',
+	'username' => 'root',
 	'password' => '',
 	'database' => 'codeigniter',
 	'dbdriver' => 'mysqli',

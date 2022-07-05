@@ -11,7 +11,7 @@ class Index_controller extends CI_Controller
         /**
          * GET cidade.infosus.net.br
          */
-        redirect('inicio');
+        redirect('admin/inicio');
     }
 
     /**

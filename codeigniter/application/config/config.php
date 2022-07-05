@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $project = '/codeigniter';
 
-$config['base_url'] = 'localhost/codeigniter';
+$config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].$project;
 
 $config['index_page'] = '';
 

@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vila barovia2.0</title>
-    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../styles/style2.css">
     <style>
         *{
     font-family: Arial, Helvetica, sans-serif;
@@ -23,11 +14,6 @@
             margin: auto;
         }
     </style>
-</head>
-<body>
-    <header>
-        <a href="../../index.html"><img src="../imagens/logo.png" alt="home-button"></a>
-    </header>
     <main>
         <div>
             <h1>CAPÍTULO 5: A CIDADE DE VALLAKI</h1>
@@ -43,6 +29,3 @@
             <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sapiente consectetur iure in, fugit, enim ex praesentium error itaque ducimus tempora molestias voluptatum dolores voluptate amet hic perferendis et earum.</P>
         </div>
     </main>
-    <footer></footer>
-</body>
-</html>

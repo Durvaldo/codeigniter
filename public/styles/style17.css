@@ -1,4 +1,8 @@
 *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -12,6 +16,7 @@
 
 
 h1{
+    color:black;
     text-align: center;
     font-size: 3em;
 }
@@ -61,7 +66,7 @@ main{
 
 .cabecalho li:hover{
     background-color: var(--cor3);
-    color: #fff;
+    color: #fff!important;
 }
 
 article{
@@ -69,6 +74,7 @@ article{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color:black;
 }
 
 #sobre-nos {
@@ -269,6 +275,10 @@ article{
     color: var(--cor5);
 }
 
+.quadrado-rodape h2{
+    color: #fff;
+}
+
 .quadrado-rodape{
     width: auto;
     height: auto;
@@ -287,4 +297,5 @@ article{
 #final{
     text-align: center;
     color: var(--cor5);
+    margin-bottom: 0px;
 }

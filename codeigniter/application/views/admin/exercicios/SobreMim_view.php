@@ -1,7 +1,7 @@
     <main>
         <h1>Minhas redes sociais</h1>
         <h2>Quem sou eu?</h2>
-        <img src="../imagens/foto principal.png" alt="Durvaldo">
+        <img src="<?= base_url('public/imagens/foto principal.png')?>" alt="Durvaldo">
         <p>Meu nome é <strong>Durvaldo Gonçalves Marques</strong>, engenheiro de controle e automação, formado pela faculdade pitagoras, tenho um sonho <br> de fazer um intercambio e estudar mais linguas estrangeiras, por mais que eu saiba me virar bem com o que eu sei de ingles, mais conhecimentos nunca é demais </p>
         <h2>Como falar comigo?</h2>
         <ul type="square">
