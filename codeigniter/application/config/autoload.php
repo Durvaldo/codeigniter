@@ -37,5 +37,6 @@ $autoload['language'] = array();
 
 
 $autoload['model'] = array(
-    
+    'Configuracao_model' => 'Configuracao',
+
 );

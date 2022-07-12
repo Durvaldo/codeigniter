@@ -22,5 +22,5 @@
     <header>
         <a href="<?= base_url('')?>"><img src="<?= base_url('public/imagens/logo.png')?>" alt="home-button"></a>
         <!-- <h1 id="main-title">Portifolio de estudo Durvaldo</h1> -->
-
     </header>
+    <?= $this->ui->alert_flashdata() ?>

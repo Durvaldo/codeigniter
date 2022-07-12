@@ -9,8 +9,8 @@
                 <li class="btn btn-primary filter-active" data-filter="*">Todos</li>
                 <li class="btn btn-primary" data-filter=".filter-exercicios">Exercicios</li>
                 <li class="btn btn-primary" data-filter=".filter-testes">Testes</li>
-                <li class="btn btn-primary" data-filter=".filter-finais">Projetos Finais</li>
-                <li class="btn btn-primary" data-filter=".filter-java">Java Script</li>
+                <li class="btn btn-primary" data-filter=".filter-projetos-finais">Projetos Finais</li>
+                <a class="btn btn-primary" href="<?= base_url('admin/configuracao')?>"><i class="fa-solid fa-gears"></i></a>
                 </ul>
             </div>
             </div>
@@ -21,7 +21,7 @@
                     <div class="card text-center tamanho-card rounded">
                         <div class="card-body d-flex flex-column justify-content-around">
                         <h3><i class="fa-solid fa-earth-americas fa-2x"></i></h3>
-                        <h5 class="card-title small-caps">Olá mundo 1</h5>
+                        <h5 class="card-title small-caps">Olá mundo</h5>
                         </div>
                     </div>
                     <!-- Card hover -->
@@ -213,7 +213,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 portfolio-item filter-finais" >
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 portfolio-item filter-projetos-finais" >
                 <div class="hoverbox text-center tamanho-card mb-4 shadow rounded">
                     <!-- Card antes do hover -->
                     <div class="card text-center tamanho-card rounded">
@@ -285,7 +285,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 portfolio-item filter-finais" >
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 portfolio-item filter-projetos-finais" >
                 <div class="hoverbox text-center tamanho-card mb-4 shadow rounded">
                     <!-- Card antes do hover -->
                     <div class="card text-center tamanho-card rounded">
@@ -357,7 +357,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 portfolio-item filter-finais" >
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 portfolio-item filter-projetos-finais" >
                 <div class="hoverbox text-center tamanho-card mb-4 shadow rounded">
                     <!-- Card antes do hover -->
                     <div class="card text-center tamanho-card rounded">

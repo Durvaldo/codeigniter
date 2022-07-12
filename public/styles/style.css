@@ -42,6 +42,11 @@ main{
     flex: 1 0 auto;
 }
 
+.cabecalho_tabela{
+    background-color: #333d66;
+    color: #FFF;
+}
+
 .main-title{
     font-family: 'Leckerli One', cursive;
     color: #31343d;
