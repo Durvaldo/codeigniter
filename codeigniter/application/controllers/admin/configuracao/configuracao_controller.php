@@ -12,11 +12,11 @@ class Configuracao_controller extends Sistema_Controller
         $this->view('configuracao/Configuracao_view', $data);
     }
 
-    public function adicionar(): void
-    {
-        $data['title'] = 'Configurações - Adcionar';
-        $this->view('configuracao/Form_button_view', $data);
-    }
+    // public function adicionar(): void
+    // {
+    //     $data['title'] = 'Configurações - Adcionar';
+    //     $this->view('configuracao/Form_button_view', $data);
+    // }
 
     public function new(): void
     {
@@ -24,23 +24,23 @@ class Configuracao_controller extends Sistema_Controller
         $this->Configuracao->insert($botao);
         $this->session->set_flashdata('success', 'BOTÃO ADCIONADO COM SUCESSO');    
         // redirect($this->agent->referrer());    
-        redirect(base_url('admin/configuracao/adicionar'));
+        redirect(base_url('admin/configuracao'));
         //flash sem funcionar
 
     }
 
-    public function openEdit($id): void
-    {
-        $data['botoes'] = $this->Configuracao->select($id);
-        $data['title'] = 'Configurações - Editar';
-        $this->view('configuracao/Form_button_view', $data);
+    // public function openEdit($id): void
+    // {
+    //     $data['botao'] = $this->Configuracao->select($id);
+    //     $data['title'] = 'Configurações - Editar';
+    //     $this->view('configuracao/Form_button_view', $data);
         
-    }
+    // }
 
-    public function edit($id): void
+    public function edit(): void
     {
         $botao = $this->input->post();
-        $this->Configuracao->update( ['botoes_id' => $id] , $botao);
+        $this->Configuracao->update( ['botoes_id' => $botao['botoes_id']] , $botao);
         redirect(base_url('admin/configuracao'));
     }
     public function delete($id): void
