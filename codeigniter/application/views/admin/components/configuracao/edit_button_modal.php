@@ -8,7 +8,6 @@
 			<form class="p-4" action="<?= base_url('admin/configuracao/editar')?>" method="post">
 				<?= $csrf_input ?>
 				<input type="hidden" name="botoes_id" id="botoes_id">
-
 				<div class="row">
 					<div class="text-dark col-md-6">
 						<div class="form-group">
@@ -18,14 +17,26 @@
 					</div>
 					<div class="text-dark col-md-6">
 						<div class="form-group">
-							<label for="botoes_filtro"><h5>Filtro</h5></label>
-							<input type="text" class="form-control" name="botoes_filtro" id="botoes_filtro" placeholder="Filtro" required>
+							<label for="botoes_filtro">Filtro</label>
+							<select id="botoes_filtro" class="custom-select"  name="botoes_filtro" required>
+							<option>Selecione...</option>
+								<?php foreach ($filtros as $filtro) : ?>
+									<option value="<?= $filtro['filtro_id'] ?>"><?= str_replace("-", " ", ucfirst($filtro['filtro_text'])) ?></option>
+        
+
+								<?php endforeach; ?>
+							</select>
 						</div>
 					</div>
-					<div class="text-dark col-md-6">
+					<div class="text-dark col-md-5">
 						<div class="form-group">
-							<label for="botoes_icone"><h5>Icone</h5></label>
-							<input type="text" class="form-control" name="botoes_icone" id="botoes_icone" placeholder="Icone" required>
+							<label for="botoes_icone">Icone</label>
+							<select id="botoes_icone" class="custom-select"  name="botoes_icone" required>
+								<option>Selecione...</option>
+								<?php foreach ($icones as $icone) : ?>
+									<option value="<?= $icone['icone_id'] ?>"><?= $icone['icone_tipo'] ." fa-".$icone['icone_text']?></option>
+								<?php endforeach; ?>
+							</select>
 						</div>
 					</div>
 					<div class="col-md-6">

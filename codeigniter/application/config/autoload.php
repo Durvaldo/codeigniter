@@ -38,5 +38,6 @@ $autoload['language'] = array();
 
 $autoload['model'] = array(
     'Configuracao_model' => 'Configuracao',
-
+    'Icone_button_model' => 'Icone_button',
+    'Filtro_button_model' => 'Filtro_button'
 );

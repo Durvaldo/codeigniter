@@ -3,9 +3,11 @@
     <hr>
     <div class="container my-2">
         <div>
-            <a type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#add_button_modal">Adicionar <i class="fa-solid fa-folder-plus"></i></a>
+            <a type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#add_button_modal">Adicionar botão <i class="fa-solid fa-folder-plus"></i></a>
+            <a type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#add_filtro_button_modal">Adicionar filtro <i class="fa-solid fa-filter"></i></a>
+            <a type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#add_icone_button_modal">Adicionar icone <i class="fa-solid fa-font-awesome"></i></i></a>
         </div>
-        <table class="table table-striped table-bordered table-hover mb-8">
+            <table class="table table-striped table-bordered table-hover mb-8">
             <thead>
                 <tr class="cabecalho_tabela">
                     <th scope="col">Titulo</th>
@@ -17,15 +19,14 @@
                 </tr>
             </thead>  
             <tbody>
-                <?php foreach ($botoes as $p) : ?>
+                <?php foreach ($botoes as $botao) : ?>
                     <tr>
-                        <td class="text-dark text-left"><?= $p['botoes_titulo'] ?></td>
-                        <td class="text-dark text-left"><?= $p['botoes_filtro'] ?></td>
-                        <td class="text-dark text-left"><?= $p['botoes_icone'] ?></td>
-                        <td class="text-dark text-left"><?= $p['botoes_descricao'] ?></td>
-                        <td class="text-dark text-center">
-                            
-                                    <span class="text-center fa-solid fa-circle <?= ($p['botoes_status'] == 0 ? 'text-danger' : 'text-success') ?> " style="font-size:20px"></span>
+                        <td class="text-dark text-left"><?= $botao['botoes_titulo'] ?></td>
+                        <td class="text-dark text-left"><?= $botao['filtro_text'] ?></td>
+                        <td class="text-dark text-center"><i class="<?= $botao['icone_tipo'] .' fa-'. $botao['icone_text'] ?>"></i></td>
+                        <td class="text-dark text-left"><?= $botao['botoes_descricao'] ?></td>
+                        <td class="text-dark text-center"> 
+                            <span class="text-center fa-solid fa-circle <?= ($botao['botoes_status'] == 0 ? 'text-danger' : 'text-success') ?> " style="font-size:20px"></span>
                         </td>
                         <td class="text-dark text-center">
                             <div class="btn-group">
@@ -33,13 +34,13 @@
                                     <i class="fa-solid fa-caret-down"></i>
                                 </button>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item text-left editar_tabela_botoes_button" data-button_id="<?= $p['botoes_id'] ?>" href="#">
+                                    <a class="dropdown-item text-left editar_tabela_botoes_button" data-button_id="<?= $botao['botoes_id'] ?>" href="#">
                                         <i class="fa-solid fa-pencil"></i> Editar
                                     </a>
-                                    <a class="dropdown-item text-left" href="<?= base_url('admin/configuracao/deletar/').$p['botoes_id']?>"><i class="fa-solid fa-trash-can"></i></i> Apagar</a>
+                                    <a class="dropdown-item text-left" href="<?= base_url('admin/configuracao/deletar/').$botao['botoes_id']?>"><i class="fa-solid fa-trash-can"></i></i> Apagar</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item text-left" href="<?= base_url('admin/configuracao/switch/').$p['botoes_id']?>" method="post">
-                                        <i class="fa-solid fa-toggle-<?= ($p['botoes_status'] == 1 ? 'on' : 'off')?>"></i> <?= ($p['botoes_status'] == 0 ? 'Ativar' : 'Desativar')?>
+                                    <a class="dropdown-item text-left" href="<?= base_url('admin/configuracao/switch/').$botao['botoes_id']?>" method="post">
+                                        <i class="fa-solid fa-toggle-<?= ($botao['botoes_status'] == 1 ? 'on' : 'off')?>"></i> <?= ($botao['botoes_status'] == 0 ? 'Ativar' : 'Desativar')?>
                                     </a>
                                 </div>
                             </div>
@@ -50,7 +51,9 @@
         </table>
     </div>
     <?php $this->load->view('admin/components/configuracao/edit_button_modal') ?> 
-    <?php $this->load->view('admin/components/configuracao/add_button_modal') ?> 
+    <?php $this->load->view('admin/components/configuracao/add_button_modal') ?>
+    <?php $this->load->view('admin/components/configuracao/add_filtro_button_modal') ?>
+    <?php $this->load->view('admin/components/configuracao/add_icone_button_modal') ?>
 </main>
 
 <script>

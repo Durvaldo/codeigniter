@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-header bg-primary d-flex justify-content-between">
-                <div><h5 class="modal-title font-weight-light text-white" id="add_paciente_label">Adicionar Botão</h5></div>
+                <div><h5 class="modal-title font-weight-light text-white">Adicionar Botão</h5></div>
 				<div><button class=" btn-close" type="button" data-dismiss="modal" aria-label="Close"></button></div>
             </div>
 			<form class="p-4" action="<?= base_url('admin/configuracao/adicionar')?>" method="post">
@@ -15,17 +15,41 @@
 							<input type="text" class="form-control" name="botoes_titulo" id="botoes_titulo" placeholder="Titulo" required>
 						</div>
 					</div>
-					<div class="text-dark col-md-6">
-						<div class="form-group">
+					<div class="text-dark col-md-5">
+						<!-- <div class="form-group">
 							<label for="botoes_filtro"><h5>Filtro</h5></label>
 							<input type="text" class="form-control" name="botoes_filtro" id="botoes_filtro" placeholder="Filtro" required>
+						</div> -->
+						<div class="form-group">
+							<label for="botoes_filtro">Filtro</label>
+							<select class="custom-select" id="botoes_filtro" name="botoes_filtro" required>
+							<option value="" disabled selected>Selecione...</option>
+								<?php foreach ($filtros as $filtro) : ?>
+									<option value="<?= $filtro['filtro_id'] ?>"><?= str_replace("-", " ", ucfirst($filtro['filtro_text'])) ?></option>
+        
+
+								<?php endforeach; ?>
+							</select>
 						</div>
 					</div>
-					<div class="text-dark col-md-6">
+					<div class="col-md-1">
+						<div><h4 class="text-white">teste</h4></div>
+						<a type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#add_filtro_button_modal"><i class="fa-solid fa-circle-plus"></i></i></a>
+					</div>
+					<div class="text-dark col-md-5">
 						<div class="form-group">
-							<label for="botoes_icone"><h5>Icone</h5></label>
-							<input type="text" class="form-control" name="botoes_icone" id="botoes_icone" placeholder="Icone" required>
+							<label for="botoes_icone">Icone</label>
+							<select class="custom-select" id="botoes_icone" name="botoes_icone" required>
+								<option value="" disabled selected>Selecione...</option>
+								<?php foreach ($icones as $icone) : ?>
+									<option value="<?= $icone['icone_id'] ?>"><?= $icone['icone_tipo'] ." fa-".$icone['icone_text']?></option>
+								<?php endforeach; ?>
+							</select>
 						</div>
+					</div>
+					<div class="col-md-1">
+						<div><h4 class="text-white">teste</h4></div>
+						<a type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#add_icone_button_modal"><i class="fa-solid fa-circle-plus"></i></i></a>
 					</div>
 					<div class="col-md-6">
 						<div class="text-dark form-group">

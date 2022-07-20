@@ -8,6 +8,8 @@ class Configuracao_controller extends Sistema_Controller
     public function index(): void
     {
         $data['botoes'] = $this->Configuracao->getAll();
+        $data['icones'] = $this->Icone_button->getAll();
+        $data['filtros'] = $this->Filtro_button->getAll();
         $data['title'] = 'Configurações';
         $this->view('configuracao/Configuracao_view', $data);
     }
@@ -26,7 +28,20 @@ class Configuracao_controller extends Sistema_Controller
         // redirect($this->agent->referrer());    
         redirect(base_url('admin/configuracao'));
         //flash sem funcionar
+    }
 
+    public function newIcon(): void
+    {
+        $icone = $this->input->post();
+        $this->Icone_button->insert($icone); 
+        redirect(base_url('admin/configuracao'));
+    }
+
+    public function newFilter(): void
+    {
+        $filtro = $this->input->post();
+        $this->Filtro_button->insert($filtro);
+        redirect(base_url('admin/configuracao'));
     }
 
     // public function openEdit($id): void
